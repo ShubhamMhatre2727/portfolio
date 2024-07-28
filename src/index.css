@@ -21,6 +21,6 @@
 
 @media screen and (max-width:720px) {
   .Home{
-    background-position: right;
+    background-position: left;
   }
 }
