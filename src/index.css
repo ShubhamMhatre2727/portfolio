@@ -17,6 +17,7 @@
   background-image: url("public/images/home-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 @media screen and (max-width:720px) {
