@@ -1,6 +1,38 @@
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap/all'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React from 'react'
 
+gsap.registerPlugin(ScrollTrigger);
 const Contact = () => {
+
+  useGSAP(()=>{
+    gsap.fromTo(".Contact",{
+      backgroundSize:"200%",
+      backgroundPositionY:30,
+    },{
+      backgroundPositionY:100,
+      scrollTrigger:{
+        trigger:".Contact",
+        scrub:true,
+        start:"top 30%",
+        end:"+=700"
+      }
+    })
+
+    gsap.fromTo(".Contact > .Glass",{
+      opacity:0
+    },{
+      opacity:1,
+      scrollTrigger:{
+        trigger:".Contact > .Glass",
+        scrub:true,
+        start:"top 40%",
+        end:"+=100"
+      }
+    })
+  },[])
+
   return (
     <div id='Contact' className='Contact relative grid items-center justify-center'>
       <div className='border Glass w-96 h-80 md:w-[50vw] sm:w-[60vw] md:h-3/5 flex flex-col items-center justify-center'>
