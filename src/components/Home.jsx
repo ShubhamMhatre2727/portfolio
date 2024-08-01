@@ -14,7 +14,7 @@ export const Home = () => {
 
         const tl = gsap.timeline();
 
-        tl.fromTo(["h1","p"],{
+        tl.fromTo(["#heading","#description"],{
             translateX:-600,
         },{
             translateX:0,

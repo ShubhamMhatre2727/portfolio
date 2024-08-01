@@ -6,12 +6,12 @@ import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div>
+    <div className="snap-y">
       <NavBar/>
-      <Home />
-      <Skills/>
-      <Projects/>
-      <Contact/>
+      <Home className="snap-start snap-always" />
+      <Skills className="snap-start snap-always"/>
+      <Projects className="snap-start snap-always"/>
+      <Contact className="snap-start snap-always"/>
     </div>
   );
 }

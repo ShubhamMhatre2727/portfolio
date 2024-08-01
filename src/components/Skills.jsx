@@ -1,6 +1,39 @@
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React from 'react'
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Skills = () => {
+
+  useGSAP(()=>{
+    gsap.fromTo(".Skills",{
+      backgroundSize:"400%",
+      backgroundPosition:"center"
+    },{
+      backgroundSize:"150%",
+      scrollTrigger:{
+        trigger:".Skills",
+        scrub:true,
+        start:"top bottom",
+        end:"+=700"
+      }
+    });
+
+    gsap.fromTo(".Glass",{
+      opacity:0
+    },{
+      opacity:1,
+      scrollTrigger:{
+        trigger:".Skills",
+        scrub:true,
+        start:"top 30%",
+        end:"+=500"
+      }
+    })
+  },[])
+
   return (
     <div className='Skills flex justify-center items-center'>
         <div className="Glass w-96 sm:w-3/5 py-5 flex flex-col justify-center items-center">

@@ -37,7 +37,7 @@ export const NavBar = () => {
   }
 
   return (
-    <nav className="fixed z-10 list-none w-full flex flex-col sm:flex-row items-end cursor-pointer text-3xl sm:text-sm [&>*]:w-full sm:[&>*]:w-auto sm:justify-center sm:gap-6 [&>*]:text-end [&>*]:bg-black sm:[&>*]:bg-transparent sm:translate-y-2 [&>*]:bg-opacity-35 ">
+    <nav className="fixed z-10 list-none w-full flex flex-col sm:flex-row items-end cursor-pointer text-3xl sm:text-sm [&>*]:w-full sm:[&>*]:w-auto sm:justify-center sm:gap-6 [&>*]:text-end [&>*]:bg-black sm:[&>*]:bg-transparent sm:bg-transparents sm:translate-y-2 [&>*]:bg-opacity-35 ">
       <svg onClick={handleNav} className="hamburger sm:hidden h-10" xmlns="http://www.w3.org/2000/svg">
   <line id="top" x1="93%" y1="35%" y2="35%" x2="99%" stroke="gray" strokeWidth={2}/>
   <line id="mid" x1="93%" y1="50%" y2="50%" x2="99%" stroke="gray" strokeWidth={2}/>
