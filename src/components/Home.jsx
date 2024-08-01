@@ -49,7 +49,7 @@ export const Home = () => {
     },[])
 
   return (
-    <div className='Home'>
+    <div id="Home" className='Home'>
         <div className='h-[90%] flex flex-col md:items-start justify-center items-center px-10'>
             <h1 id='heading' className='sm:text-6xl text-4xl text-white font-semibold'>Shubham Mhatre</h1>
             <p id='description' className='md:w-[40%] sm:w-96 w-80 sm:text-lg md:text-start text-center text-sm'>I’m Web Developer from Panvel graduated in ‘Information Technology’ from saraswati college of engineering, kharghar.</p>
