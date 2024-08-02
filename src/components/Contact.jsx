@@ -8,14 +8,15 @@ const Contact = () => {
 
   useGSAP(()=>{
     gsap.fromTo(".Contact",{
-      backgroundSize:"200%",
-      backgroundPositionY:30,
+      backgroundSize:"400%",
+      backgroundPositionY:40,
     },{
-      backgroundPositionY:100,
+      backgroundSize:"200%",
+      backgroundPositionY:80,
       scrollTrigger:{
         trigger:".Contact",
         scrub:true,
-        start:"top 30%",
+        start:"top bottom",
         end:"+=700"
       }
     })
@@ -45,7 +46,7 @@ const Contact = () => {
           <input type="submit" value="send"/>
         </form>
       </div>
-      <p className='absolute bottom-0 w-full text-center font-sans'>Copyright@2024 Shubham Mhatre</p>
+      <p className='absolute bottom-0 w-full text-center font-sans bg-black bg-opacity-15'>Copyright@2024 Shubham Mhatre</p>
     </div>
   )
 }

@@ -8,27 +8,46 @@ export default function Projects() {
 
   useGSAP(()=>{
     gsap.fromTo(".Projects",{
-      backgroundSize:"400%",
+      backgroundSize:"300%",
       backgroundPosition:"center"
     },{
+      
       backgroundSize:"160%",
-      duration:2,
       scrollTrigger:{
         trigger:".Projects",
         start: "top 70%",
+        scrub:1
+      }
+    })
+
+    gsap.fromTo(".Card",{
+      scale:3,
+      opacity:0,
+    },{
+      
+      scale:1,
+      opacity:1,
+      scrollTrigger:{
+        trigger:".Projects",
+        start: "top bottom",
+        end:"top 70%",
+        scrub:1
       }
     })
 
     gsap.utils.toArray([[".Projects > h1","50px"],[".Projects p","14px"]]).forEach((el)=>{
       gsap.fromTo(el[0],{
-        fontSize:"100vw"
+        fontSize:"40vw",
       },{
+        
         fontSize:el[1],
-        duration:2,
         scrollTrigger:{
           trigger:".Projects",
-          start: "top 70%",
-        }
+          start: "top bottom",
+          end:"top 40%",
+          scrub:1,
+        },
+        ease:"sine.inOut"
       })
     })
     
