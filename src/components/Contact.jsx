@@ -7,29 +7,15 @@ gsap.registerPlugin(ScrollTrigger);
 const Contact = () => {
 
   useGSAP(()=>{
-    gsap.fromTo(".Contact",{
-      backgroundSize:"400%",
-      backgroundPositionY:40,
+    gsap.fromTo(".Contact > .Glass",{
+      translateY: -200,
     },{
-      backgroundSize:"200%",
-      backgroundPositionY:80,
+      translateY:0,
       scrollTrigger:{
         trigger:".Contact",
         scrub:true,
         start:"top bottom",
-        end:"+=700"
-      }
-    })
-
-    gsap.fromTo(".Contact > .Glass",{
-      opacity:0
-    },{
-      opacity:1,
-      scrollTrigger:{
-        trigger:".Contact > .Glass",
-        scrub:true,
-        start:"top 40%",
-        end:"+=100"
+        end: "top top"
       }
     })
   },[])
@@ -46,7 +32,7 @@ const Contact = () => {
           <input type="submit" value="send"/>
         </form>
       </div>
-      <p className='absolute bottom-0 w-full text-center font-sans bg-black bg-opacity-15'>Copyright@2024 Shubham Mhatre</p>
+      <p className='absolute bottom-0 w-full text-center font-sans text-xs bg-black bg-opacity-15'>Copyright@2024 Shubham Mhatre</p>
     </div>
   )
 }

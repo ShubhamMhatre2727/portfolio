@@ -21,7 +21,7 @@ export const NavBar = () => {
       timeline.reverse()
 
         gsap.to("nav > li",{
-          translateY: -150,
+          translateY: -180,
           stagger:-0.2
         })
       
@@ -44,8 +44,9 @@ export const NavBar = () => {
   <line id="bottom" x1="93%" y1="65%" y2="65%" x2="99%" stroke="gray" strokeWidth={2}/>
 </svg>
       <li className="hover:text-white -translate-y-20 sm:translate-y-0"><a href="#Home">Home</a></li>
-      <li className="hover:text-white -translate-y-28 sm:translate-y-0"><a href="#Projects">Projects</a></li>
-      <li className="hover:text-white -translate-y-36 sm:translate-y-0"><a href="#Contact">Contact</a></li>
+      <li className="hover:text-white -translate-y-28 sm:translate-y-0"><a href="#Skills">Skills</a></li>
+      <li className="hover:text-white -translate-y-36 sm:translate-y-0"><a href="#Projects">Projects</a></li>
+      <li className="hover:text-white -translate-y-44 sm:translate-y-0"><a href="#Contact">Contact</a></li>
     </nav>
   );
 };

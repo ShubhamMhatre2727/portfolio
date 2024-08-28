@@ -9,6 +9,11 @@
   color: rgb(172, 172, 172);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   scroll-behavior: smooth;
+  
+}
+
+*::-webkit-scrollbar{
+  display: none;
 }
 
 nav{
@@ -24,20 +29,13 @@ nav{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+  background-color: #003848;
 }
 .Home{
   background-image: url("/images/home-bg.jpg");
 }
 .Home > div > p, .Home > div > h1{
   text-shadow: 1px 1px 1px black;
-}
-
-.Skills{
-  background-image: url("/images/skills-bg.jpg");
-}
-
-.Projects {
-  background-image: url("/images/projects-bg.jpg");
 }
 
 .Contact{
