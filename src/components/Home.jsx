@@ -1,52 +1,5 @@
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import React from 'react';
-
 export const Home = () => {
 
-    useGSAP(()=>{
-        gsap.fromTo(".Home",{
-            filter: "brightness(0%)"
-        },{
-            delay:1,
-            filter: "brightness(100%)",
-        })
-
-        const tl = gsap.timeline();
-
-        tl.fromTo(["#heading","#description"],{
-            translateX:-600,
-        },{
-            translateX:0,
-            delay:1,
-            stagger:0.1
-        })
-
-        // hr tag animation start at same time as h1
-        tl.fromTo("hr",{
-            width:0,
-        },{
-            width:"100%",
-            duration:2
-        },"<")
-
-        tl.fromTo("#home-footer > img",{
-            opacity:0,
-        },{
-            opacity:1
-        })
-
-        tl.fromTo("a",{
-            rotateX:90,
-            translateY:-14,
-        },{
-            rotateX:0,
-            translateY:0,
-            ease: "bounce.out",
-            stagger:0.1
-        })
-        
-    },[])
 
   return (
     <div id="Home" className='Home'>
