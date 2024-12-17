@@ -1,40 +1,48 @@
+import { div } from "motion/react-client";
+
 export default function Projects() {
-
+  const list = [
+    {
+      title:"apple website",
+      img:'/images/projects/apple-website.jpg',
+    },
+    {
+      title:"file share",
+      img:'/images/projects/file-share.jpg',
+    },
+    {
+      title:"spotify lyrics generator",
+      img:'/images/projects/spotify-lyrics-generator.jpg',
+    },
+    {
+      title:"movie recommendation system",
+      img:'/images/projects/recommendation-system.jpg',
+    },
+    {
+      title:"nitro energy",
+      img:'/images/projects/nitro-energy.jpg',
+    },
+    {
+      title:"real estates website",
+      img:'/images/projects/real-estates-website.jpg',
+    },
+  ]
   return (
-    <div id="Projects" className="Projects flex flex-col items-center justify-center overflow-hidden">
+    <div id="Projects" className="Projects h-fit bg-slate-500 flex flex-col items-center py-8">
       <h1 className="text-3xl font-bold my-4 text-white">PROJECTS</h1>
-      <div className="w-full flex flex-wrap justify-center gap-6 sm:gap-20 overflow-y-auto pt-9">
+      <div className="flex flex-wrap justify-around gap-y-4">
 
-        <div className="Card md:w-80 md:h-56">
-          <div className="bg-orange-300">
-            <img src="\images\projects\apple-website.jpg" alt="" />
-            <p>apple website</p>
-          </div>
-        </div>
-        <div className="Card md:w-80 md:h-56">
-          <div className="bg-orange-300">
-            <img src="\images\projects\file-share.jpg" alt="" />
-            <p>file-share</p>
-          </div>
-        </div>
-        <div className="Card md:w-80 md:h-56">
-          <div className="bg-orange-300">
-            <img src="\images\projects\spotify-lyrics-generator.jpg" alt="" />
-            <p>spotify-lyrics-generator</p>
-          </div>
-        </div>
-        <div className="Card md:w-80 md:h-56">
-          <div className="bg-orange-300">
-            <img src="\images\projects\recommendation-system.jpg" alt="" />
-            <p>file-share</p>
-          </div>
-        </div>
-        <div className="Card md:w-80 md:h-56">
-          <div className="bg-orange-300">
-            <img src="\images\projects\sentiment-analyzer.jpg" alt="" />
-            <p>sentiment analyzer</p>
-          </div>
-        </div>
+        {
+          list.map((project)=>{
+            return(
+              <div className="w-2/5 border border-black hover:scale-105">
+                <p className="size-full border-2 border-white hover:scale-75">
+                  {project.title}
+                </p>
+              </div>
+            )
+          })
+        }
       </div>
     </div>
   );
